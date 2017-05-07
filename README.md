@@ -8,7 +8,4 @@ Used stuff:
 * angular 4 (material design, rx, tdd, e2e, validations)
 * travis
 * firebase
-* semantic-version
-* greenkeeper version
-
 
