@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatInputModule, MatListModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FizzBuzzService } from './shared/index';
 import { FizzBuzzComponent } from './fizz-buzz-root/fizz-buzz.component';
@@ -27,7 +27,7 @@ import 'rxjs/add/observable/of';
     MatInputModule,
     MatListModule,
     FlexLayoutModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     FizzBuzzComponent,
