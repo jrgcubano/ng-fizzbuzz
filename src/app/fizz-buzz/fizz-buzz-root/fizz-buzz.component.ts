@@ -22,7 +22,7 @@ export class FizzBuzzComponent implements OnInit {
     Observable.range(1, numbers)
       .flatMap(value => this._fizzBuzzService.verify(value))
       .toArray()
-     	.do(x => console.log("range toArray: " + x))
+      .do(x => console.log('range toArray: ' + x))
       .subscribe(verified => this.results = verified);
   }
 }

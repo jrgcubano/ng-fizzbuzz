@@ -9,6 +9,6 @@ export class FizzBuzzPage {
     return element(by.css('input'));
   }
   getResultItems() {
-    return element.all(by.css('md-list-item'));
+    return element.all(by.css('mat-list-item'));
   }
 }

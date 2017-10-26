@@ -12,6 +12,17 @@ export class FizzBuzzGivenComponent implements OnInit {
 
   form: FormGroup;
 
+  formErrors = {
+    'numbers': '',
+  };
+
+  validationMessages = {
+    'numbers': {
+      'required': 'Number is required.',
+      'checkRange': 'Enter a valid number between 1 and 100'
+    }
+  };
+
   constructor(
     private _fb: FormBuilder) {
   }
@@ -26,8 +37,8 @@ export class FizzBuzzGivenComponent implements OnInit {
       .debounceTime(400)
       .distinctUntilChanged()
       .subscribe((value: number) => {
-        if(this.verifyValueChanged('numbers', value)) {
-          this.given.emit(value)
+        if (this.verifyValueChanged('numbers', value)) {
+          this.given.emit(value);
         }
       });
 
@@ -48,16 +59,5 @@ export class FizzBuzzGivenComponent implements OnInit {
       }
     }
     return true;
-  }
-
-  formErrors = {
-    'numbers': '',
-  };
-
-  validationMessages = {
-    'numbers': {
-      'required': 'Number is required.',
-      'checkRange': 'Enter a valid number between 1 and 100'
-    }
   }
 }

@@ -7,14 +7,14 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
   styleUrls: ['./fizz-buzz-items.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FizzBuzzItemsComponent implements OnInit {
+export class FizzBuzzItemsComponent implements OnInit, OnDestroy {
 
   private _data = new BehaviorSubject<string[]>([]);
 
   @Input()
   set data(value) {
     this._data.next(value);
-  };
+  }
 
   get data() {
     return this._data.getValue();

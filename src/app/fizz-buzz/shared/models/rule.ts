@@ -1,6 +1,6 @@
 export interface IRule {
-  validate(value: number): boolean;
   result: string;
+  validate(value: number): boolean;
 }
 
 export abstract class Rule implements IRule {
@@ -18,7 +18,7 @@ export abstract class Rule implements IRule {
 
   abstract validate(value: number): boolean;
 
-  toString() : string {
+  toString(): string {
     return `${this._result}`;
   }
 }
