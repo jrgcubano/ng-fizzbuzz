@@ -12,15 +12,15 @@ import { MockFizzBuzzItemsComponent } from './testing/mock-fizz-buzz-items.compo
 
 export function describe_tests() {
   describe('FizzBuzzComponent', () => {
-    let results = ['Fizz', 'Buzz', 'FizzBuzz'];
+    const results = ['Fizz', 'Buzz', 'FizzBuzz'];
 
     beforeEach(() => { });
 
     it('should verify kata when given triggered', fakeAsync(() => {
       create_fizzbuzz_component().then((fizzbuzz_component) => {
         fizzbuzz_component.trigger_given(1);
-        let results = fizzbuzz_component.sub.results;
-        expect(results).toEqual(['1']);
+        const cmp_results = fizzbuzz_component.sub.results;
+        expect(cmp_results).toEqual(['1']);
       });
     }));
 
@@ -28,7 +28,7 @@ export function describe_tests() {
       create_fizzbuzz_component().then((fizzbuzz_component) => {
         fizzbuzz_component.sub.results = results;
         fizzbuzz_component.fire_results();
-        let items = fizzbuzz_component.get_displayed_items();
+        const items = fizzbuzz_component.get_displayed_items();
         expect(items.length).toEqual(3);
       });
     }));
@@ -47,7 +47,7 @@ export function describe_tests() {
             declarations: [MockFizzBuzzItemsComponent]
           }
         }).compileComponents().then(() => {
-          let fizzbuzz_component = TestBed.createComponent(FizzBuzzComponent);
+          const fizzbuzz_component = TestBed.createComponent(FizzBuzzComponent);
           resolve({
             trigger_given: (value: number) => {
               const givenEl = fizzbuzz_component.debugElement
@@ -64,7 +64,7 @@ export function describe_tests() {
               return items;
             },
             sub: fizzbuzz_component.componentInstance
-          })
+          });
         });
       });
     }

@@ -30,7 +30,7 @@ export function describe_tests() {
         const hint = fizzbuzz_given_component.get_error_hint();
         expect(givenValue).toBeUndefined();
         expect(current).toEqual(message);
-        expect(hint).toEqual(message)
+        expect(hint).toEqual(message);
       });
     }));
 
@@ -40,7 +40,7 @@ export function describe_tests() {
           imports: [FizzBuzzModule]
         })
           .compileComponents().then(() => {
-            let fizzbuzz_given_component = TestBed.createComponent(FizzBuzzGivenComponent);
+            const fizzbuzz_given_component = TestBed.createComponent(FizzBuzzGivenComponent);
             resolve({
               enter_number: (value: number) => {
                 fizzbuzz_given_component.detectChanges();
@@ -53,13 +53,13 @@ export function describe_tests() {
               get_error_hint: (value: number) => {
                 fizzbuzz_given_component.detectChanges();
                 const input_hint = fizzbuzz_given_component.debugElement
-                  .query(By.css('md-hint'))
+                  .query(By.css('mat-hint'))
                   .query(By.css('span')).nativeElement;
                 const text = input_hint.textContent;
                 return text;
               },
               sub: fizzbuzz_given_component.componentInstance
-            })
+            });
           });
       });
     }

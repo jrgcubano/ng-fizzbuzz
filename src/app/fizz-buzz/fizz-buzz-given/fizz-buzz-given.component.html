@@ -1,8 +1,8 @@
 <form [formGroup]="form" novalidate>
-  <md-input-container>
-    <input type="number" mdInput #givenInput name="numbers" placeholder="Enter a number" formControlName="numbers">
-    <md-hint *ngIf="formErrors.numbers" [ngStyle]="{'color': 'red'}">
+  <mat-form-field>
+    <input type="number" matInput #givenInput name="numbers" placeholder="Enter a number" formControlName="numbers">
+    <mat-hint *ngIf="formErrors.numbers" [ngStyle]="{'color': 'red'}">
       <span>{{ formErrors.numbers }}</span>
-    </md-hint>
-  </md-input-container>
+    </mat-hint>
+  </mat-form-field>
 </form>

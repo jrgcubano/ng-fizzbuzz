@@ -1,11 +1,13 @@
-# FizzBuzz Kata with Angular 4
+# FizzBuzz Kata with Typescript and Angular
 
-[![Build Status](https://travis-ci.org/jrgcubano/ng-fizzbuzz.svg?branch=master)](https://travis-ci.org/jrgcubano/ng-fizzbuzz)
+[![build status](https://img.shields.io/travis/jrgcubano/ng-fizzbuzz.svg?style=flat-square)](https://travis-ci.org/jrgcubano/ng-fizzbuzz)
+[![coveralls](https://img.shields.io/coveralls/jrgcubano/ng-fizzbuzz.svg?style=flat-square)](https://coveralls.io/github/jrgcubano/ng-fizzbuzz)
 
 [Firebase Demo](https://fizzbuzzkata.firebaseapp.com/)
 
 Used stuff:
-* angular 4 (material design, rx, tdd, e2e, validations)
-* travis
-* firebase
+* Angular 4+ (material design, rx, tdd, e2e, validations)
+* Travis
+* Coveralls
+* Firebase
 

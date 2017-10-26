@@ -6,14 +6,14 @@ import { FizzBuzzItemsComponent } from './fizz-buzz-items.component';
 
 export function describe_tests() {
   describe('FizzBuzzItemsComponent', () => {
-    let results = ['Fizz', 'Buzz', 'FizzBuzz'];
+    const results = ['Fizz', 'Buzz', 'FizzBuzz'];
     beforeEach(() => { });
 
     it('should set items when supplied data input', fakeAsync(() => {
       create_fizzbuzz_items_component().then((fizzbuzz_items_component) => {
         fizzbuzz_items_component.sub.data = results;
         fizzbuzz_items_component.fire_data();
-        let items = fizzbuzz_items_component.sub.items;
+        const items = fizzbuzz_items_component.sub.items;
         expect(items.length).toBe(3);
       });
     }));
@@ -31,7 +31,7 @@ export function describe_tests() {
         TestBed.configureTestingModule({
           imports: [FizzBuzzModule]
         }).compileComponents().then(() => {
-          let fizzbuzz_items_component = TestBed.createComponent(FizzBuzzItemsComponent);
+          const fizzbuzz_items_component = TestBed.createComponent(FizzBuzzItemsComponent);
           resolve({
             fire_data: () => {
               fizzbuzz_items_component.detectChanges();
@@ -39,7 +39,7 @@ export function describe_tests() {
             get_displayed_items: (): any => {
               fizzbuzz_items_component.detectChanges();
               const items = fizzbuzz_items_component.debugElement
-                .queryAll(By.css('md-list-item'));
+                .queryAll(By.css('mat-list-item'));
               return items;
             },
             sub: fizzbuzz_items_component.componentInstance

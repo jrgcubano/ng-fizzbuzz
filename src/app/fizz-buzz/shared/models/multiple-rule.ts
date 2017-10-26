@@ -8,6 +8,6 @@ export class MultipleRule extends Rule implements IMultipleRule {
   }
 
   validate(given: number): boolean {
-    return given % this._value == 0;
+    return given % this._value === 0;
   }
 }
