@@ -15,13 +15,6 @@ module.exports = function(config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    customLaunchers: {
-      // chrome setup for travis CI using chromium
-      Chrome_travis_ci: {
-        base: "Chrome",
-        flags: ["--no-sandbox"]
-      }
-    },
     files: [
       { pattern: "./src/test.ts", watched: false },
       {
@@ -53,11 +46,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ["Chrome"],
-    singleRun: false
+    singleRun: true
   };
-
-  if (process.env.TRAVIS) {
-    configuration.browsers = ["Chrome_travis_ci"];
-  }
   config.set(configuration);
 };
