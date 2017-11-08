@@ -6,7 +6,7 @@
 [Firebase Demo](https://fizzbuzzkata.firebaseapp.com/)
 
 Used stuff:
-* Angular 4+ (material design, rx, tdd, e2e, validations)
+* Angular 5+ (material design, rx, tdd, e2e, validations)
 * Travis
 * Coveralls
 * Firebase
